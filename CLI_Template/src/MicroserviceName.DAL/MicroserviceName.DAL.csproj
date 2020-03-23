@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" Condition="'$(dapper)' == 'true'" />
+    <PackageReference Include="FluentMigrator" Version="3.2.1" Condition="'$(dapper)' == 'true'" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" Condition="'$(efcore)' == 'true'" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicroserviceName.Domain\MicroserviceName.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DAO\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Clients\" />
+    <Folder Include="Store\Migrations\" />
+  </ItemGroup>
+
+</Project>

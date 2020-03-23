@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Example\DataAccess\" />
+    <Folder Include="Example\Models\" />
+    <Folder Include="Example\Services\" />
+    <Folder Include="Example\Validators\" />
+  </ItemGroup>
+
+</Project>
