@@ -2,7 +2,7 @@
 
 ## Prequisites
 
-- .NET Core SDK 3.1
+- .NET Core SDK 5.0
 
 ## CLI_Template Usage
 
