@@ -1,6 +1,7 @@
 ﻿using FluentValidation.AspNetCore;
 using MicroserviceName.Host.AppSettings;
 using MicroserviceName.Host.Middlewares;
+using MicroserviceName.Host.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -47,6 +48,7 @@ namespace MicroserviceName.Host
                     Contact = _swaggerSettings.Contact,
                     Version = _appMetadata.Version,
                 });
+                config.OperationFilter<RequiredHeadersOperationFilter>();
             });
 
             services.AddSingleton(_appMetadata);
