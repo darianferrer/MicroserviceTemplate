@@ -52,6 +52,8 @@ namespace MicroserviceName.Host
             });
 
             services.AddSingleton(_appMetadata);
+
+            // TODO: Add Dapper/FluentMigrator or EntityFramework Core setup
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
